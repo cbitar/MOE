@@ -1,0 +1,58 @@
+
+<h2>Find Students</h2>
+
+<tr ng-repeat="s in vm.students | filter:{name: vm.filterName, genre: vm.filterGenre, level: vm.filterLevel, instrument: vm.filterInstrument}">
+  <td>Name: {{s.name}}</td>
+    <input ng-model="vm.filterName" type="text">
+  <td>Genre: {{s.genre}}</td>
+    <input ng-model="vm.filterGenre" type="text">
+  <td>Level: {{s.level}}</td>
+    <select ng-model="vm.filterLevel" value="level">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+  <td>Instrument: {{s.instrument}}</td>
+    <input ng-model="vm.filterInstrument" type="text">
+</tr>
+
+<h2>Find Teachers</h2>
+
+<tr ng-repeat="t in vm.teachers | filter:{name: vm.filterTeacherName, genre: vm.filterTeacherGenre, level: vm.filterTeacherLevel, instrument: vm.filterTeacherInstrument}">
+  <td>Name: {{t.name}}</td>
+    <input ng-model="vm.filterTeacherName" type="text">
+  <td>Genre: {{t.genre}}</td>
+    <input ng-model="vm.filterTeacherGenre" type="text">
+  <td>Level: {{t.level}}</td>
+    <select ng-model="vm.filterTeacherLevel" value="level">
+      <option value="beginner">Beginner</option>
+      <option value="intermediate">Intermediate</option>
+      <option value="advanced">Advanced</option>
+    </select>
+  <td>Inttrument: {{t.instrument}}</td>
+    <input ng-model="vm.filterTeacherInstrument" type="text">
+</tr>
+
+<!-- Name: <select name="filter" id="filter">
+  <option value="name">Name</option>
+  <option value="genre">Genre</option>
+  <option value="level">Level</option>
+  <option value="instrument">Instrument</option>
+</select>
+
+Find Students: <input type="text">
+<input class="btn btn-success" type="submit"> -->
+
+
+
+<!--
+Search By: <select name="filter" id="filter">
+  <option value="name">Name</option>
+  <option value="genre">Genre</option>
+  <option value="level">Level</option>
+  <option value="instrument">Instrument</option>
+</select>
+
+Find Teachers: <input type="text">
+<input class="btn btn-success" type="submit"> -->
+

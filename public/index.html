@@ -1,0 +1,49 @@
+<!DOCTYPE html>
+<html ng-app="app">
+<head>
+  <meta charset="utf-8">
+  <title>Professional Nobodies HR</title>
+  <script src="https://code.jquery.com/jquery-2.2.4.min.js"
+  integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
+  crossorigin="anonymous"></script>
+  <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
+  <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
+  <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
+</head>
+<body>
+  <nav class="navbar navbar-light bg-faded">
+    <div class="container-fluid">
+    <div class="navbar-header">
+      <a class="navbar-brand" href="#">MOE</a>
+    </div>
+    <ul class="nav navbar-nav">
+      <li class="active"><a ui-sref="welcome">Home</a></li>
+      <li><a ui-sref="about">About</a></li>
+      <li><a ui-sref="dashboard">My Profile</a></li>
+      <li><a ui-sref="search">Find Musicians</a></li>
+      <li><a ui-sref="lesson">Lesson Room</a></li>
+      <li><a ui-sref="login">Login</a></li>
+    </ul>
+  </div>
+  </nav>
+
+<!--   <h1>Start Your Lesson Online Today</h1> -->
+<!--   <h2>Are you a student or teacher looking to collaborate online?</h2>
+  <h2>Make a profile now</h2> -->
+
+
+  <main class="content" ui-view></main>
+
+  <script src="js/app/app.module.js"></script>
+  <script src="js/app/app.routes.js"></script>
+  <script src="js/app/services/auth.interceptor.js"></script>
+  <script src="js/app/services/auth.token.service.js"></script>
+  <script src="js/app/services/auth.config.js"></script>
+  <script src="js/app/services/user.service.js"></script>
+  <script src="js/app/login/login.controller.js"></script>
+  <script src="js/app/dashboard/dashboard.controller.js"></script>
+
+</body>
+</html>
+
