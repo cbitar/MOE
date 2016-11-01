@@ -1,4 +1,22 @@
 
+<!-- use ng-click and ng-show and hide to make display dynamic -->
+
+<fieldset class="form-group">
+    <legend>Who are you looking for?</legend>
+    <div class="form-check">
+      <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+        Find Teachers
+      </label>
+    </div>
+    <div class="form-check">
+    <label class="form-check-label">
+        <input type="radio" class="form-check-input" name="optionsRadios" id="optionsRadios2" value="option2">
+        Find Students
+    </label>
+    </div>
+
+
 <h2>Find Students</h2>
 
 <tr ng-repeat="s in vm.students | filter:{name: vm.filterName, genre: vm.filterGenre, level: vm.filterLevel, instrument: vm.filterInstrument}">

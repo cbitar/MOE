@@ -17,7 +17,7 @@
       })
       .state('home', {
         url: '/home',
-        templateUrl: 'js/app/templates/home.html'
+        templateUrl: 'js/app/welcome/home.html'
       })
       .state('about', {
         url: '/about',
