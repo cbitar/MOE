@@ -26,6 +26,7 @@ function authenticate(req, res, next) {
     next()
   });
 }
+
 function create(req, res, next) {
   if (!req.body.email || !req.body.password) {
     return next({

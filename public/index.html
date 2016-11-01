@@ -2,7 +2,7 @@
 <html ng-app="app">
 <head>
   <meta charset="utf-8">
-  <title>Professional Nobodies HR</title>
+  <title>MOE</title>
   <script src="https://code.jquery.com/jquery-2.2.4.min.js"
   integrity="sha256-BbhdlvQf/xTY9gja0Dq3HiwQF8LaCRTXxZKRutelT44="
   crossorigin="anonymous"></script>
@@ -11,7 +11,7 @@
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 </head>
-<body>
+<body ng-controller="LoginController as authCtrl">
   <nav class="navbar navbar-light bg-faded">
     <div class="container-fluid">
     <div class="navbar-header">
@@ -20,10 +20,13 @@
     <ul class="nav navbar-nav">
       <li class="active"><a ui-sref="welcome">Home</a></li>
       <li><a ui-sref="about">About</a></li>
-      <li><a ui-sref="dashboard">My Profile</a></li>
-      <li><a ui-sref="search">Find Musicians</a></li>
-      <li><a ui-sref="lesson">Lesson Room</a></li>
-      <li><a ui-sref="login">Login</a></li>
+      <li ng-show="authCtrl.getUser()"><a ui-sref="dashboard">My Profile</a></li>
+      <li><a ui-sref="form-teacher">New Teacher</a></li>
+      <li><a ui-sref="form-student">New Student</a></li>
+      <li ng-show="authCtrl.getUser()"><a ui-sref="search">Find Musicians</a></li>
+      <li ng-show="authCtrl.getUser()"><a ui-sref="lesson">Lesson Room</a></li>
+      <li ng-hide="authCtrl.getUser()"><a ui-sref="login">Login</a></li>
+      <li ng-show="authCtrl.getUser()"><a href="#" ng-click="authCtrl.logout()">Logout</a></li>
     </ul>
   </div>
   </nav>

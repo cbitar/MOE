@@ -23,6 +23,14 @@
         url: '/about',
         templateUrl: 'js/app/about/about.html'
       })
+      .state('form-teacher', {
+        url: '/form-teacher',
+        templateUrl: 'js/app/new/form.teacher.html'
+      })
+      .state('form-student', {
+        url: '/form-student',
+        templateUrl: 'js/app/new/form.student.html'
+      })
       .state('search', {
         url: '/search',
         templateUrl: 'js/app/search/search.html'

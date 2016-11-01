@@ -12,7 +12,7 @@ var teacherSchema = new mongoose.Schema({
   length_per_lesson: Number,
   genre: String,
   bio: String,
-  userId: String,
+  instrument: String,
   created: { type: Date, default: Date.now }
 });
 

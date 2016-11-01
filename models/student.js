@@ -8,7 +8,7 @@ var studentSchema = new mongoose.Schema({
   videos: Array,
   genre: String,
   bio: String,
-  userId: String,
+  instrument: String,
   level: String,
   created: { type: Date, default: Date.now }
 });

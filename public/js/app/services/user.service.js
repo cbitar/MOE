@@ -37,16 +37,33 @@
     }
 
     function getUser() {
-      if (user) return user;
-      var token = AuthTokenService.getToken();
-      if ( token ) {
-        user = decode(token);
-        return user;
-      }
+      return user;
+      // if (user) return user;
+      // var token = AuthTokenService.getToken();
+      // if ( token ) {
+      //   user = decode(token);
+      //   return user;
+      // }
     }
 
     function decode(token) {
       return JSON.parse($window.atob(token.split('.')[1])).user;
+    }
+
+    function signUp(newTeacher) {
+      console.log(newTeacher)
+      $http.post('/api/form-teacher' ,newTeacher)
+        .then(function(response){
+          console.log(response)
+        })
+    }
+
+    function signUp(newStudent) {
+      console.log(newStudent)
+      $http.post('/api/form-student' ,newStudent)
+        .then(function(response){
+          console.log(response)
+        })
     }
   }
 

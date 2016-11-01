@@ -11,9 +11,13 @@
     vm.login = login;
     vm.errors = null;
     vm.logout = logout;
+    vm.getUser = function() {
+      return UserService.getUser();
+    };
 
     function logout() {
       UserService.logout();
+      $state.go('welcome');
     }
 
     function login() {
