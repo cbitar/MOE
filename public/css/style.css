@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Raleway');
+@import url('https://fonts.googleapis.com/css?family=Coiny|Raleway');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -8,6 +8,20 @@ body {
 
 .box {
   border: 2px solid black;
+}
+
+#splashMoe {
+  font-weight: bolder;
+  font-family: 'Coiny', cursive;
+  font-size: 90px;
+  color: #f9bd73;
+}
+
+.navbar-brand {
+  /*background-color: #f9bd73;*/
+  font-family: 'Coiny', cursive;
+/*  border: 1px solid black;
+  border-radius: 60px;*/
 }
 
 a:hover {
