@@ -1,10 +1,24 @@
+@import url('https://fonts.googleapis.com/css?family=Raleway');
+
 body {
+  font-family: 'Raleway', sans-serif;
   background-image: url("http://hdwallpaperbackgrounds.net/wp-content/uploads/2016/08/Music-Wallpaper-HD-11.jpg");
   color: #cdcccc;
 }
 
 .box {
   border: 2px solid black;
+}
+
+a:hover {
+  background-color: #f9bd73;
+}
+/*.active:hover {
+  background-color: #f9bd73;
+}*/
+.headlog {
+  margin-top: 10px;
+  margin-left: 600px;
 }
 
 #moe {
