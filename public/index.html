@@ -8,6 +8,7 @@
   crossorigin="anonymous"></script>
   <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.5/css/bootstrap.min.css">
   <link rel="stylesheet" type="text/css" href="css/style.css">
+  <script src="https://maxcdn.bootstrapcdn.com/bootstrap/3.3.7/js/bootstrap.min.js" integrity="sha384-Tc5IQib027qvyjSMfHjOMaLkfuWVxZxUPnCJA7l2mCWNIpG9mGCD8wGNIcPD7Txa" crossorigin="anonymous"></script>
   <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.5.8/angular.js"></script>
   <script src="https://cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.3.1/angular-ui-router.js"></script>
 </head>
@@ -18,6 +19,7 @@
       <a class="navbar-brand" ui-sref="home">MOE</a>
     </div>
     <ul class="nav navbar-nav">
+    <!-- fix route change home tab -->
       <li class="active"><a ui-sref="welcome">Home</a></li>
       <li><a ui-sref="about">About</a></li>
       <li ng-show="authCtrl.getUser()"><a ui-sref="dashboard">My Profile</a></li>
@@ -27,13 +29,25 @@
       <li ng-show="authCtrl.getUser()"><a ui-sref="lesson">Lesson Room</a></li>
       <li ng-hide="authCtrl.getUser()"><a ui-sref="login">Login</a></li>
       <li ng-show="authCtrl.getUser()"><a href="#" ng-click="authCtrl.logout()">Logout</a></li>
-    </ul>
+      <li>{{authCtrl.getUser().name}}</li>
+      <li ng-hide="authCtrl.getUser()"><button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Login</button></li>
+ </ul>
   </div>
   </nav>
 
-<!--   <h1>Start Your Lesson Online Today</h1> -->
-<!--   <h2>Are you a student or teacher looking to collaborate online?</h2>
-  <h2>Make a profile now</h2> -->
+  <div id="modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+    <div class="modal-dialog modal-sm">
+      <div class="modal-content">
+        <input type="text" placeholder="Username" ng-model="vm.email">
+        <input type="password" placeholder="Password" ng-model="vm.password">
+        <button id="modal-but" class="btn btn-success" ng-click="vm.login()">Log In</button>
+        <br>
+        <div ng-show="vm.errors">
+          {{vm.errors}}
+        </div>
+      </div>
+    </div>
+  </div>
 
 
   <main class="content" ui-view></main>

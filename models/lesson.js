@@ -3,10 +3,9 @@ var ObjectId = mongoose.Schema.Types.ObjectId;
 
 
 var lessonSchema = new mongoose.Schema({
-  teacher: String,
-  student: String,
-  time: Date,
-  date: Date,
+  teacher: {type: ObjectId, ref: 'Teacher'},
+  student: {type: ObjectId, ref: 'Student'},
+  dateTime: Date,
   created: { type: Date, default: Date.now }
 });
 

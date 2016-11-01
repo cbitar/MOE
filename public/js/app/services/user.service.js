@@ -37,20 +37,19 @@
     }
 
     function getUser() {
-      return user;
-      // if (user) return user;
-      // var token = AuthTokenService.getToken();
-      // if ( token ) {
-      //   user = decode(token);
-      //   return user;
-      // }
+      if (user) return user;
+      var token = AuthTokenService.getToken();
+      if ( token ) {
+        user = decode(token);
+        return user;
+      }
     }
 
     function decode(token) {
       return JSON.parse($window.atob(token.split('.')[1])).user;
     }
 
-    function signUp(newTeacher) {
+    function signUpTeacher(newTeacher) {
       console.log(newTeacher)
       $http.post('/api/form-teacher' ,newTeacher)
         .then(function(response){
@@ -58,7 +57,7 @@
         })
     }
 
-    function signUp(newStudent) {
+    function signUpStudent(newStudent) {
       console.log(newStudent)
       $http.post('/api/form-student' ,newStudent)
         .then(function(response){

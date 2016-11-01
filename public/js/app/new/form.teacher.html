@@ -1,28 +1,28 @@
 
 <h2 class="splash">New Teacher</h2>
-<form action="POST">
+<form>
 <div class="form-group row">
-  <label for="example-text-input" class="col-xs-2 col-form-label">Name</label>
   <div class="col-xs-6">
-    <input class="form-control" type="text"  id="example-text-input">
+
+<!--   <input ng-model="vm.newTeacher.name">
+  <input ng-model="vm.newTeacher.email"> -->
+
+    <input ng-model="vm.newTeacher.name" class="form-control" placeholder="Name" type="text"  id="example-text-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-search-input" class="col-xs-2 col-form-label">Email</label>
   <div class="col-xs-6">
-    <input class="form-control" type="search" id="example-search-input">
+    <input ng-model="vm.newTeacher.email" class="form-control" placeholder="Email" type="email" id="example-search-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-email-input" class="col-xs-2 col-form-label">Password</label>
   <div class="col-xs-6">
-    <input class="form-control" type="email" id="example-email-input">
+    <input ng-model="vm.newTeacher.password" class="form-control" placeholder="Password" type="password" id="example-email-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-url-input" class="col-xs-2 col-form-label">Level</label>
   <div class="col-xs-6">
-    <select class="form-control" id="example-url-input">
+    <select ng-model="vm.newTeacher.level" class="form-control" placeholder="Level" id="example-url-input">
       <option class="form-control" value="beginner">Beginner</option>
       <option class="form-control" value="intermediate">Intermediate</option>
       <option class="form-control" value="advanced">Advanced</option>
@@ -30,41 +30,36 @@
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-tel-input" class="col-xs-2 col-form-label">Price per Lesson</label>
   <div class="col-xs-6">
-    <input class="form-control" type="tel" id="example-tel-input">
+  <span class="input-group-addon">$</span>
+    <input ng-model="vm.newTeacher.price_per_lesson" class="form-control" placeholder="Price per Lesson" type="tel" id="example-tel-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-password-input" class="col-xs-2 col-form-label">Length per Lesson</label>
   <div class="col-xs-6">
-    <input class="form-control" type="password" id="example-password-input">
+    <input ng-model="vm.newTeacher.length_per_lesson" class="form-control" placeholder="Length per Lesson" type="text" id="example-password-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-number-input" class="col-xs-2 col-form-label">Genre</label>
   <div class="col-xs-6">
-    <input class="form-control" type="text"id="example-number-input">
+    <input ng-model="vm.newTeacher.genre" class="form-control" placeholder="Genre" type="text"id="example-number-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-datetime-local-input" class="col-xs-2 col-form-label">Instrument</label>
   <div class="col-xs-6">
-    <input class="form-control" type="text" id="example-datetime-local-input">
+    <input ng-model="vm.newTeacher.instrument" class="form-control" placeholder="Instrument" type="text" id="example-datetime-local-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-date-input" class="col-xs-2 col-form-label">Videos</label>
   <div class="col-xs-6">
-    <input class="form-control" type="text" id="example-date-input">
+    <input ng-model="vm.newTeacher.videos" class="form-control" placeholder="Videos" type="text" id="example-date-input">
   </div>
 </div>
 <div class="form-group row">
-  <label for="example-date-input" class="col-xs-2 col-form-label">Bio</label>
   <div class="col-xs-6">
-<textarea class="form-control" id="exampleTextarea" rows="3"></textarea>  </div>
+<textarea ng-model="vm.newTeacher.bio" class="form-control" placeholder="Bio" id="exampleTextarea" rows="3"></textarea>  </div>
 </div>
-<button id="form-but" type="submit" class="btn btn-primary">Submit</button>
+<button ng-click="vm.signUpTeacher()" id="form-but" class="btn btn-primary">Submit</button>
 
 </form>
 

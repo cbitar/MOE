@@ -51,6 +51,6 @@
         templateUrl: 'js/app/dashboard/dashboard.html',
         controller: 'DashboardController as vm'
       });
-    $urlRouterProvider.otherwise('/welcome');
+    $urlRouterProvider.otherwise('/home');
   }
 })();

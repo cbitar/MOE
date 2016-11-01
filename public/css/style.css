@@ -12,7 +12,7 @@ body {
 }
 
 form {
-  margin-left: 140px;
+  margin-left: 440px;
 }
 
 label {
@@ -20,8 +20,22 @@ label {
 }
 
 #form-but {
-  margin-left: 220px;
+/*  margin-left: 500px;*/
 }
+
+#modal-but {
+  color: #fff;
+  background-color: #5cb85c;
+  border-color: #4cae4c;
+  margin-left: 20px;
+  margin-bottom: 13px;
+}
+
+
+.modal-content{
+  padding: 27px;
+}
+
 
 .homebox {
   display: inline-block;
@@ -32,9 +46,32 @@ label {
   text-align: center;
 }
 
+#card {
+  width: 80%;
+  padding: 25px;
+  border-radius: 47px;
+  text-align: center;
+  margin-left: 120px;
+  background-color: transparent;
+}
+
+#hangout {
+    -webkit-appearance: button;
+    cursor: pointer;
+    margin-left: -438px;
+}
+
+span {
+  width: 20%;
+}
+
 .glyphicon {
   font-size: 60px;
   color: #cdcccc;
+}
+
+#log {
+  padding: 100px;
 }
 
 #splashpage {

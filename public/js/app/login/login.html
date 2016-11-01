@@ -1,12 +1,17 @@
-<div class="pull-right">
-<label>Username</label>
-<input type="text" ng-model="vm.email">
-<label>Password</label>
-<input type="password" ng-model="vm.password">
-<button class="btn btn-success" ng-click="vm.login()">Log In</button>
-<br>
-<button class="btn btn-danger" ng-click="vm.logout()">Log Out</button>
-<div ng-show="vm.errors">
-  {{vm.errors}}
+<div id="modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+  <div class="modal-dialog modal-sm">
+    <div class="modal-content">
+      <input type="text" placeholder="Username" ng-model="vm.email">
+      <input type="password" placeholder="Password" ng-model="vm.password">
+      <button id="modal-but" class="btn btn-success" ng-click="vm.login()">Log In</button>
+      <br>
+      <div ng-show="vm.errors">
+        {{vm.errors}}
+      </div>
+    </div>
+  </div>
 </div>
-</div>
+
+<button type="button" class="btn btn-primary" data-toggle="modal" data-target=".bd-example-modal-sm">Small modal</button>
+
+

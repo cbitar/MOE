@@ -12,8 +12,22 @@
     vm.errors = null;
     vm.logout = logout;
     vm.getUser = function() {
-      return UserService.getUser();
+      vm.user = UserService.getUser();
+      return vm.user;
     };
+    vm.signUpTeacher = signUpTeacher;
+    vm.signUpStudent = signUpStudent;
+
+    function signUpTeacher() {
+      console.log('npt working')
+      UserService.signUpTeacher();
+      $state.go('dashboard');
+    }
+
+    function signUpStudent() {
+      UserService.signUpStudent();
+      $state.go('dashboard');
+    }
 
     function logout() {
       UserService.logout();

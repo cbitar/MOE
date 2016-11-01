@@ -1,4 +1,4 @@
-  <form action="https://plus.google.com/hangouts/_" method="GET">
+<!--   <form action="https://plus.google.com/hangouts/_" method="GET">
     <input type="hidden" name="gid" value="">
     <select name="gd" id="">
       <option>Hangouts</option>
@@ -6,4 +6,27 @@
       <option>+1 button</option>
     </select>
     <input class="btn btn-info" type="submit">
+  </form> -->
+
+<div id="card" class="card card-inverse">
+  <div class="card-block">
+    <h2 class="card-title">Start your Hangout</h2>
+    <h3 class="card-text">Use the email address of the user you'd like to connect with</h3>
+    <br>
+    <form action="https://plus.google.com/hangouts/_" method="GET">
+    <input type="hidden" name="gid" value="">
+    <select style="display: none;" name="gd" id="">
+      <option>Hangouts</option>
+      <option>Google+ API</option>
+      <option>+1 button</option>
+    </select>
+    <input id="hangout" class="btn btn-info" type="submit" value="Start a Hangout">
   </form>
+   </div>
+</div>
+
+<div id="getEmail">
+<h2>Don't know your student or teacher's email?</h2>
+<h3>Type their name here</h3>
+  <input type="text">
+</div>
