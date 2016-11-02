@@ -14,7 +14,9 @@
     var service = {
       login: login,
       logout: logout,
-      getUser: getUser
+      getUser: getUser,
+      signUpStudent: signUpStudent,
+      signUpTeacher: signUpTeacher
     }
 
     return service;
@@ -51,18 +53,29 @@
 
     function signUpTeacher(newTeacher) {
       console.log(newTeacher)
-      $http.post('/api/form-teacher' ,newTeacher)
+      return $http.post('/api/form-teacher' ,newTeacher)
         .then(function(response){
-          console.log(response)
+          var token = response.data.token;
+          console.log(token);
+          AuthTokenService.setToken(token);
+          user = decode(token);
+          return user;
+        }, function(error) {
+          console.log(error);
         })
     }
 
     function signUpStudent(newStudent) {
-      console.log(newStudent)
-      $http.post('/api/form-student' ,newStudent)
+      return $http.post('/api/form-student', newStudent)
         .then(function(response){
-          console.log(response)
-        })
+          var token = response.data.token;
+          console.log(token);
+          AuthTokenService.setToken(token);
+          user = decode(token);
+          return user;
+        }, function(error) {
+          console.log(error);
+        });
     }
   }
 

@@ -6,8 +6,27 @@ body {
   color: #cdcccc;
 }
 
+nav {
+  margin-top: 5px;
+  margin-left: 10px;
+}
+
 .box {
   border: 2px solid black;
+}
+
+input, select {
+  color: black;
+}
+
+.active {
+  color: #cdcccc;
+}
+a.active:hover {
+  font-weight: bolder;
+  background-color: red;
+  color: black;
+  text-shadow: 10px;
 }
 
 #splashMoe {
@@ -18,8 +37,10 @@ body {
 }
 
 .navbar-brand {
+  color: #f9bd73;
   /*background-color: #f9bd73;*/
   font-family: 'Coiny', cursive;
+  font-size: 25px;
 /*  border: 1px solid black;
   border-radius: 60px;*/
 }
@@ -74,7 +95,7 @@ label {
   text-align: center;
 }
 
-#card {
+.card {
   width: 80%;
   padding: 25px;
   border-radius: 47px;

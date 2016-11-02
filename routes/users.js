@@ -4,6 +4,14 @@ var User = require('../models/user');
 var Student = require('../models/student');
 var Teacher = require('../models/teacher');
 var token = require('../config/token-auth');
+var jwt = require('jsonwebtoken');
+
+var secret = 'shhhhh';
+
+var jwtOptions = {
+ algorithm: 'HS256',
+ expiresIn: '7 days'
+};
 
 router.post('/login', token.create);
 
@@ -21,39 +29,23 @@ router.get('/students', function(req, res, next){
 
 
 router.post('/form-teacher', function(req, res, next) {
-  var newTeacher = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    level: req.body.level,
-    videos: req.body.videos,
-    genre: req.body.genre,
-    bio: req.body.bio,
-    instrument: req.body.instrument,
-    price_per_lesson: req.body.price_per_lesson,
-    length_per_lesson: req.body.length_per_lesson,
-  }
-  Teacher.create(newTeacher, function(err, newTeacher) {
-    if(err) return res.json(newTeacher)
-      res.status(201).json(newTeacher)
-  })
+  Teacher.create(req.body, function(err, newTeacher) {
+    if(err) return res.status(400).json({error: 'Invalid new teacher'});
+    let token = jwt.sign({ user: newTeacher }, secret, jwtOptions);
+    return res.json({
+      token: token
+    });
+  });
 })
 
 router.post('/form-student', function(req, res, next) {
-  var newStudent = {
-    name: req.body.name,
-    email: req.body.email,
-    password: req.body.password,
-    level: req.body.level,
-    videos: req.body.videos,
-    genre: req.body.genre,
-    bio: req.body.bio,
-    instrument: req.body.instrument
-  }
-  Student.create(newTeacher, function(err, newStudent) {
-    if(err) return res.json(newStudent)
-      res.status(201).json(newStudent)
-  })
+  Student.create(req.body, function(err, newStudent) {
+    if(err) return res.status(400).json({error: 'Invalid new student'});
+    let token = jwt.sign({ user: newStudent }, secret, jwtOptions);
+    return res.json({
+      token: token
+    });
+  });
 })
 
 module.exports = router;

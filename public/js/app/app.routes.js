@@ -25,11 +25,13 @@
       })
       .state('form-teacher', {
         url: '/form-teacher',
-        templateUrl: 'js/app/new/form.teacher.html'
+        templateUrl: 'js/app/new/form.teacher.html',
+        controller: 'TeacherController as vm'
       })
       .state('form-student', {
         url: '/form-student',
-        templateUrl: 'js/app/new/form.student.html'
+        templateUrl: 'js/app/new/form.student.html',
+        controller: 'StudentController as vm'
       })
       .state('search', {
         url: '/search',
