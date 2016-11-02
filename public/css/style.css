@@ -19,6 +19,13 @@ input, select {
   color: black;
 }
 
+#slogan {
+  font-weight: bolder;
+  border: 1px solid white;
+  background-color: white;
+
+}
+
 .active {
   color: #cdcccc;
 }
@@ -58,6 +65,7 @@ a:hover {
 
 #moe {
   text-align: center;
+  margin: 30px;
 }
 
 form {

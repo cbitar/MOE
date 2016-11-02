@@ -12,10 +12,7 @@ function authenticate(req, res, next) {
   var authHeader = req.get('Authorization');
 
   if (!authHeader) {
-    return next({
-      status:  401,
-      message: 'Authentication failed: missing auth header'
-    })
+    return res.status(400).json({error: 'Bad credentials'});
   }
 
   var token = authHeader.split(' ')[1]
@@ -29,10 +26,7 @@ function authenticate(req, res, next) {
 
 function create(req, res, next) {
   if (!req.body.email || !req.body.password) {
-    return next({
-      status: 401,
-      message: 'Missing required fields: username and password'
-    })
+    return res.status(400).json({error: 'Bad credentials'});
   }
   Student.findOne({email: req.body.email})
     .then(user => {
@@ -40,10 +34,7 @@ function create(req, res, next) {
         Teacher.findOne({email: req.body.email})
         .then(user => {
           if(!user || !user.verifyPasswordSync(req.body.password)) {
-            return next({
-              message: 'User not found or password incorrect.',
-              status: 403
-            });
+            return res.status(400).json({error: 'Bad credentials'});
           } else {
             let token = jwt.sign({ user: user }, secret, jwtOptions);
             return res.json({
@@ -53,10 +44,7 @@ function create(req, res, next) {
         });
       } else {
         if (!user.verifyPasswordSync(req.body.password) ) {
-          return next({
-            message: 'User not found or password incorrect.',
-            status: 403
-          });
+        return res.status(400).json({error: 'Bad credentials'});
         } else {
           let token = jwt.sign({ user: user }, secret, jwtOptions);
           return res.json({
