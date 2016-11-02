@@ -20,9 +20,11 @@
 //     messages.innerHTML += ['<li><strong>', data.name, ':</strong> ', data.msg + '</li>'].join('');
 //   }
 
-$(function () {
-   $('#modal').hide('toggle');
-});
+// $(function () {
+//    $('.modal').modal('hide');
+// });
+
+
 
 
 //   $('#myModal').on('show.bs.modal', function (e) {

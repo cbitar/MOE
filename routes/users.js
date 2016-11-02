@@ -15,19 +15,6 @@ var jwtOptions = {
 
 router.post('/login', token.create);
 
-router.get('/teachers', function(req, res, next){
-  Teacher.find({}).exec().then((user) => {
-    res.json(users);
-  })
-});
-
-router.get('/students', function(req, res, next){
-  Student.find({}).exec().then((user) => {
-    res.json(users);
-  })
-});
-
-
 router.post('/form-teacher', function(req, res, next) {
   Teacher.create(req.body, function(err, newTeacher) {
     if(err) return res.status(400).json({error: 'Invalid new teacher'});
@@ -47,5 +34,6 @@ router.post('/form-student', function(req, res, next) {
     });
   });
 })
+
 
 module.exports = router;

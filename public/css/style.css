@@ -23,8 +23,30 @@ input, select {
   font-weight: bolder;
   border: 1px solid white;
   background-color: white;
-
 }
+
+strong {
+  font-size: 20px;
+  color: #ddd;
+  font-weight: bolder;
+}
+
+.profileList {
+/*  width: 30%;*/
+  margin: 30px;
+  background-color: transparent;
+  /*margin-left: 300px;*/
+}
+
+.profileList>li {
+    position: relative;
+    display: block;
+    padding: 10px 15px;
+    margin-bottom: -1px;
+    background-color: rgba(76, 82, 82, 0.72);
+    border: 1px solid #ddd;
+}
+
 
 .active {
   color: #cdcccc;

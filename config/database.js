@@ -8,7 +8,8 @@ var NODE_ENV = process.env.NODE_ENV || 'development'
 var url = process.env.DATABASE_URL
 
 // mongoose.connect(url);
-mongoose.connect('mongodb://localhost/app');
+// mongoose.connect('mongodb://localhost/app');
+mongoose.connect('mongodb://cbitar:pooperscooper@ds141937.mlab.com:41937/moe')
 
 // database connection event
 mongoose.connection.once('open', function () {

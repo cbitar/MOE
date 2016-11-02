@@ -37,6 +37,7 @@
     function login() {
       UserService.login(vm.email, vm.password)
         .then((user) => {
+          $('.modal-backdrop').hide();
           $state.go('dashboard')
         })
         .catch((response) => {

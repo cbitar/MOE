@@ -1,12 +1,30 @@
-<h1 class="jumbotron">My Profile</h1>
-<p>Hello, {{s.name}}</p>
+<h1>Hello, {{authCtrl.getUser().name}}</h1>
+<!-- <h2>Hello, {{authCtrl.getUser().name}}</h2> -->
+<br>
+<br>
+
+
+<!-- Name: {{authCtrl.getUser().name}}
+Email: {{authCtrl.getUser().email}}
+Instrument: {{authCtrl.getUser().instrument}}
+{{authCtrl.getUser().genre}}
+{{authCtrl.getUser().bio}}
+{{authCtrl.getUser().bio}}
+{{authCtrl.getUser().bio}}
+{{authCtrl.getUser().bio}} -->
+
+<h3>My Profile</h3>
+<ul class="list-group profileList">
+  <li class="list-group-item">Name: <strong>{{authCtrl.getUser().name}}</strong></li>
+  <li class="list-group-item">Email: <strong>{{authCtrl.getUser().email}}</strong></li>
+  <li class="list-group-item">Instrument: <strong>{{authCtrl.getUser().instrument}}</strong></li>
+  <li class="list-group-item">Genre: <strong>{{authCtrl.getUser().genre}}</strong></li>
+  <li class="list-group-item">Bio: <strong>{{authCtrl.getUser().bio}}</strong></li>
+</ul>
+
+<button class="btn btn-warning">Edit Profile</button>
 
 
 
 
-<!-- form for making a profile if none exists -->
 
-
-
-
-{{vm.students}}

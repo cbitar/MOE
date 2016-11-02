@@ -35,7 +35,17 @@
       })
       .state('search', {
         url: '/search',
-        templateUrl: 'js/app/search/search.html'
+        templateUrl: 'js/app/search/search.html',
+        controller: 'SearchController as vm',
+        resolve: {
+          MusicianService: 'MusicianService',
+          students: function(MusicianService) {
+            return MusicianService.getStudents();
+          },
+          teachers: function(MusicianService) {
+            return MusicianService.getTeachers();
+          },
+        }
       })
       .state('login', {
         url: '/login',

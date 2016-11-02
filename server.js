@@ -8,15 +8,15 @@ var db = require('./config/database');
 var app = express();
 // var routes = require('./routes/users');
 
+require('dotenv').config()
+var mongoose = require('./config/database');
 
-var indexRoutes = require('./routes/index');
 var apiRoutes = require('./routes/api');
 var userRoutes = require('./routes/users');
 
 
 var app = express();
 
-require('./config/database');
 
 
 // view engine setup
@@ -32,7 +32,6 @@ app.use(bodyParser.urlencoded({ extended: false }));
 app.use(cookieParser());
 app.use(express.static(path.join(__dirname, 'public')));
 
-app.use('/', indexRoutes);
 app.use('/api', apiRoutes);
 app.use('/api', userRoutes);
 
