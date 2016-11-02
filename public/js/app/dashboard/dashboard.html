@@ -22,7 +22,10 @@ Instrument: {{authCtrl.getUser().instrument}}
   <li class="list-group-item">Bio: <strong>{{authCtrl.getUser().bio}}</strong></li>
 </ul>
 
-<button class="btn btn-warning">Edit Profile</button>
+<input type="text" id="website" value="{{auth.Ctrl.getUser().email}}" />
+<button data-copytarget="#website">copy</button>
+
+<button ng-click="vm.updateTeacher()" class="btn btn-warning">Edit Profile</button>
 
 
 
