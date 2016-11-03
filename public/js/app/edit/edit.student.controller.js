@@ -12,7 +12,7 @@
 
     vm.updateStudent = function () {
       console.log('works')
-      MusicianService.updateStudent(vm.students)
+      MusicianService.updateStudent(vm.editingUser)
       $state.go('dashboard');
     };
 

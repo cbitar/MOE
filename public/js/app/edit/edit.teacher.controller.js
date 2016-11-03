@@ -8,7 +8,9 @@
   function EditTeacherController(MusicianService, $state, $log, UserService) {
     var vm = this;
 
-    vm.editingUser = Angular.copy(UserService.getUser());
+    vm.updateTeacher= updateTeacher;
+
+    vm.editingUser = angular.copy(UserService.getUser());
 
     function updateTeacher() {
       MusicianService.updateTeacher(vm.editingUser);
