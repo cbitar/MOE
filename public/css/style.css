@@ -30,6 +30,7 @@ input, select {
 .find {
   background-color: rgba(46, 49, 55, 0.78);
   border: 1px solid #ddd;
+  margin: 40px;
 }
 
 strong {
@@ -173,5 +174,6 @@ span {
 footer {
   background-color: transparent;
   margin-top: 300px;
+  margin-left: 80px;
 }
 
