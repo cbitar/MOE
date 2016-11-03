@@ -56,9 +56,9 @@
     //     });
     // }
 
-    function updateTeacher(Teacher) {
-      console.log(newTeacher)
-      return $http.post('/api/edit' ,newTeacher)
+    function updateTeacher(teacher) {
+      console.log(Teacher)
+      return $http.put('/api/edit-teacher' ,Teacher)
         .then(function(response){
           var token = response.data.token;
           console.log(token);
@@ -70,8 +70,8 @@
         })
     }
 
-    function updateStudent(Student) {
-      return $http.post('/api/edit', newStudent)
+    function updateStudent(student) {
+      return $http.put('/api/edit-student', Student)
         .then(function(response){
           var token = response.data.token;
           console.log(token);

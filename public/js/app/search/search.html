@@ -17,13 +17,14 @@
   </div>
 </fieldset>
 
-<div ng-show="vm.selUserType==='student'">
+<div class="animated bounceInRight" ng-show="vm.selUserType==='student'">
   <h2>Find Students</h2>
   <table class="table">
     <thead>
       <tr>
         <th><input ng-model="vm.filterName" type="text"></th>
         <th><input ng-model="vm.filterGenre" type="text"></th>
+        <th><input ng-model="vm.filterEmail" type="text"></th>
         <th>
           <select ng-model="vm.filterLevel" value="level">
             <option value="beginner">Beginner</option>
@@ -37,25 +38,28 @@
     <tr>
       <td>Name</td>
       <td>Genre</td>
+      <td>Email</td>
       <td>Level</td>
       <td>Instrument</td>
     </tr>
-    <tr ng-repeat="s in vm.students | filter:{name: vm.filterName, genre: vm.filterGenre, level: vm.filterLevel, instrument: vm.filterInstrument}">
+    <tr ng-repeat="s in vm.students | filter:{name: vm.filterName, genre: vm.filterGenre, email: vm.filterEmail, level: vm.filterLevel, instrument: vm.filterInstrument}">
       <td>{{s.name}}</td>
       <td>{{s.genre}}</td>
+      <td>{{s.email}}</td>
       <td>{{s.level}}</td>
       <td>{{s.instrument}}</td>
     </tr>
   </table>
 </div>
 
-<div ng-show="vm.selUserType==='teacher'">
+<div class="animated bounceInRight" ng-show="vm.selUserType==='teacher'">
 <h2>Find Teachers</h2>
   <table class="table">
     <thead>
       <tr>
         <th><input ng-model="vm.filterName" type="text"></th>
         <th><input ng-model="vm.filterGenre" type="text"></th>
+        <th><input ng-model="vm.filterEmail" type="text"></th>
         <th>
           <select ng-model="vm.filterLevel" value="level">
             <option value=""></option>
@@ -70,40 +74,30 @@
     <tr>
       <td>Name</td>
       <td>Genre</td>
+      <td>Email</td>
       <td>Level</td>
       <td>Instrument</td>
     </tr>
-    <tr ng-repeat="t in vm.teachers | filter:{name: vm.filterName, genre: vm.filterGenre, level: vm.filterLevel, instrument: vm.filterInstrument}">
+    <tr ng-repeat="t in vm.teachers | filter:{name: vm.filterName, genre: vm.filterGenre, email: vm.filterEmail, level: vm.filterLevel, instrument: vm.filterInstrument}">
       <td>{{t.name}}</td>
       <td>{{t.genre}}</td>
+      <td>{{t.email}}</td>
       <td>{{t.level}}</td>
       <td>{{t.instrument}}</td>
     </tr>
   </table>
 </div>
-
-
-
-<!-- Name: <select name="filter" id="filter">
-  <option value="name">Name</option>
-  <option value="genre">Genre</option>
-  <option value="level">Level</option>
-  <option value="instrument">Instrument</option>
-</select>
-
-Find Students: <input type="text">
-<input class="btn btn-success" type="submit"> -->
-
-
-
 <!--
-Search By: <select name="filter" id="filter">
-  <option value="name">Name</option>
-  <option value="genre">Genre</option>
-  <option value="level">Level</option>
-  <option value="instrument">Instrument</option>
-</select>
+<input type="text" id="website" value="{{auth.Ctrl.getUser().email}}" />
+<button data-copytarget="#website">copy</button> -->
 
-Find Teachers: <input type="text">
-<input class="btn btn-success" type="submit"> -->
+<script>
+  $(function () {
+    $('[data-toggle="popover"]').popover()
+  })
+</script>
+
+<button type="button" class="btn btn-warning animated fadeIn" style="margin: 30px;" data-toggle="popover" title="Tip" data-content="Copy and Paste the email of the student or teacher you'd like to connect with before beginning a Google Hangout in the Lesson Room">Tip</button>
+
+
 

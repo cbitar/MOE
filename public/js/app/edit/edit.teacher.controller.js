@@ -1,11 +1,11 @@
 (function(){
   'use strict';
 
-  angular.module('app').controller('EditController', EditController);
+  angular.module('app').controller('EditTeacherController', EditTeacherController);
 
-  EditController.$inject = ['MusicianService', '$state', '$log', 'students', 'teachers'];
+  EditTeacherController.$inject = ['MusicianService', '$state', '$log', 'students', 'teachers'];
 
-  function EditController(MusicianService, $state, $log, students, teachers) {
+  function EditTeacherController(MusicianService, $state, $log, students, teachers) {
     var vm = this;
 
     vm.students = students;
@@ -29,7 +29,5 @@
 
 }
 
-  // networking events
-  // targted apps, 3 agencies and recruiting forms
 
 })();

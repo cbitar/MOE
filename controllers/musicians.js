@@ -24,12 +24,14 @@ function getStudents(req, res) {
 
 function updateStudent() {
   Student.find({}, function(err, students) {
+    students = res.data
     if (err) return res.status(err.statusCode || 500).json(err);
     res.json(students);
   });
 }
 
 function updateTeacher() {
+  console.log('work')
   Teacher.find({}, function(err, teachers) {
     if (err) return res.status(err.statusCode || 500).json(err);
     res.json(teachers);

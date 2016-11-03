@@ -1,19 +1,23 @@
-<div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
+<!-- <div class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
   <div class="modal-dialog modal-sm">
-    <div class="modal-content">
-      <input type="text" placeholder="Email" ng-model="vm.email">
-      <input type="password" placeholder="Password" ng-model="vm.password">
+    <div class="modal-content"> -->
+    <div class="logForm pull-right">
+      <input class="form-control col-sm-1" type="text" placeholder="Email" ng-model="vm.email">
+      <br><br>
+      <input class="form-control" type="password" placeholder="Password" ng-model="vm.password">
+      <br>
       <button id="modal-but" class="btn btn-success" ng-click="vm.login()">Log In</button>
-      <button class="btn btn-danger" , data-dismiss="modal" aria-label="Close">cancel</button>
+      <!-- <button class="btn btn-danger" , data-dismiss="modal" aria-label="Close">Cancel</button> -->
       <br>
       <div ng-show="vm.errors">
         {{vm.errors}}
       </div>
     </div>
+<!--     </div>
   </div>
-</div>
+</div> -->
 
-<button type="button" class="btn btn-info" data-toggle="modal" data-dismiss='modal' data-target=".bd-example-modal-sm">Login</button>
+<!-- <button type="button" class="btn btn-info" data-toggle="modal" data-dismiss='modal' data-target=".bd-example-modal-sm">Login</button> -->
 
 
 

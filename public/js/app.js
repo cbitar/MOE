@@ -24,6 +24,7 @@
 //    $('.modal').modal('hide');
 // });
 
+$('#splashMoe').animateCss('bounce');
 
 
 

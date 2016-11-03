@@ -19,16 +19,24 @@ input, select {
   color: black;
 }
 
-#slogan {
+.slogan {
   font-weight: bolder;
-  border: 1px solid white;
-  background-color: white;
+/*  border: 1px solid white;*/
+  background-color: grey;
+/*  font-family: 'Coiny', cursive;*/
+
 }
 
 strong {
   font-size: 20px;
   color: #ddd;
   font-weight: bolder;
+}
+
+.logForm {
+  width: 25%;
+  margin-top: 20px;
+  margin-right: 30px;
 }
 
 .profileList {

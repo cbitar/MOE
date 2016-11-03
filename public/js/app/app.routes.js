@@ -33,9 +33,14 @@
         templateUrl: 'js/app/new/form.student.html',
         controller: 'StudentController as vm'
       })
-      .state('edit', {
-        url: '/edit',
-        templateUrl: 'js/app/edit/edit.html',
+      .state('edit-student', {
+        url: '/edit-student',
+        templateUrl: 'js/app/edit/edit.student.html',
+        controller: 'EditController as vm'
+      })
+      .state('edit-teacher', {
+        url: '/edit-teacher',
+        templateUrl: 'js/app/edit/edit.teacher.html',
         controller: 'EditController as vm'
       })
       .state('search', {
