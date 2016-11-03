@@ -1,16 +1,16 @@
-##MOE
-#Musical Online Education
+#MOE
+##Musical Online Education
 
 Links: 
 
-#Approach to Project
+##Approach to Project
     This application was built with the intentions of creating an online platform 
     with which students and teachers could connect and give and receive online lessons
     through Google Hangout's technology. This project still requires alot of development
     but it is the basis of an app that would more easily connect students and teachers of music
     online.
 
-#Technologies Used
+##Technologies Used
     HTML5
     CSS3
     Javascript
@@ -25,7 +25,7 @@ Links:
     Heroku
     Jason Web Tokens
 
-#Future Features
+##Future Features
     implementation of chat between users, socket.IO
     implementation of delete functionality
     implementation of customizable calendar on dashboard page
@@ -34,7 +34,7 @@ Links:
     easier way of stating hangout with the teacher or student of your choice
     addition of ecommerce so teachers can be paid online before starting a virtual lesson
 
-#Instructions
+##Instructions
 1. Launch application using link above
 2. Create yourself as either a student or a teacher
 3. You will be automatically logged in after signing up
