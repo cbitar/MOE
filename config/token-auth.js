@@ -32,9 +32,9 @@ function create(req, res, next) {
     Student.findOne({email: req.body.email}),
     Teacher.findOne({email: req.body.email})
   ]).then(users => {
-    [student, teacher] = users;
-    // var student = users[0];
-    // var teacher = users[1];
+    // [student, teacher] = users;
+    var student = users[0];
+    var teacher = users[1];
     return student ? student : teacher;
   }).then((user) => {
     if ( !user || !user.verifyPasswordSync(req.body.password) ) {
