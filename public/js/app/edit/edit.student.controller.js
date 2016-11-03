@@ -9,9 +9,11 @@
     var vm = this;
 
     vm.editingUser = angular.copy(UserService.getUser());
+    vm.editingUser.password = "";
+    vm.updateStudent = updateStudent;
 
-    vm.updateStudent = function () {
-      console.log('works')
+    function updateStudent () {
+      console.log('works click')
       MusicianService.updateStudent(vm.editingUser)
       $state.go('dashboard');
     };

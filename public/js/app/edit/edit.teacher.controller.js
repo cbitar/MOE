@@ -11,6 +11,7 @@
     vm.updateTeacher= updateTeacher;
 
     vm.editingUser = angular.copy(UserService.getUser());
+    vm.editingUser.password = "";
 
     function updateTeacher() {
       MusicianService.updateTeacher(vm.editingUser);

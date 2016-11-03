@@ -53,6 +53,7 @@
       return JSON.parse($window.atob(token.split('.')[1])).user;
     }
 
+
     function signUpTeacher(newTeacher) {
       console.log(newTeacher)
       return $http.post('/api/form-teacher' , newTeacher)
@@ -84,7 +85,8 @@
       return user.hasOwnProperty('price_per_lesson');
     };
 
-    function setUserViaToken() {
+    function setUserViaToken(token) {
+      console.log(token)
       AuthTokenService.setToken(token);
       user = decode(token);
     }

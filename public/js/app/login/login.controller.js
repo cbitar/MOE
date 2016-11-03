@@ -31,7 +31,7 @@
 
     function logout() {
       UserService.logout();
-      $state.go('welcome');
+      $state.go('home');
     }
 
     function login() {

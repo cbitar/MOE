@@ -4,9 +4,9 @@
   angular.module('app')
     .factory('MusicianService', MusicianService);
 
-  MusicianService.$inject = ['$http', '$q'];
+  MusicianService.$inject = ['$http', '$q', 'UserService'];
 
-  function MusicianService($http, $q) {
+  function MusicianService($http, $q, UserService) {
 
     var teachers = null;
     var students = null;
@@ -38,27 +38,9 @@
         });
     }
 
-    // function updateTeacher() {
-    //   if (teachers) return $q.when(teachers);
-    //   return $http.get('/api/teachers')
-    //     .then(function(resp) {
-    //       teachers = resp.data;
-    //       return teachers;
-    //     });
-    // }
-
-    // function updateStudent() {
-    //     if (students) return $q.when(students);
-    //     return $http.get('/api/students')
-    //     .then(function(resp) {
-    //       students = resp.data;
-    //       return students;
-    //     });
-    // }
-
     function updateTeacher(teacher) {
       console.log(teacher)
-      return $http.put('/api/edit-teacher' ,teacher)
+      return $http.put('/api/teachers' ,teacher)
         .then(function(response){
           UserService.setUserViaToken(response.data.token);
           // AuthTokenService.setToken(token);
@@ -67,7 +49,7 @@
     }
 
     function updateStudent(student) {
-      return $http.put('/api/edit-student', student)
+      return $http.put('/api/students', student)
         .then(function(response){
           UserService.setUserViaToken(response.data.token);
           // AuthTokenService.setToken(token);
