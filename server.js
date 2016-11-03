@@ -4,11 +4,11 @@ var favicon = require('serve-favicon');
 var logger = require('morgan');
 var cookieParser = require('cookie-parser');
 var bodyParser = require('body-parser');
+require('dotenv').config()
 var db = require('./config/database');
 var app = express();
 // var routes = require('./routes/users');
 
-require('dotenv').config()
 var mongoose = require('./config/database');
 
 var apiRoutes = require('./routes/api');

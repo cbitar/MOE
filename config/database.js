@@ -9,7 +9,7 @@ var url = process.env.DATABASE_URL
 
 // mongoose.connect(url);
 // mongoose.connect('mongodb://localhost/app');
-mongoose.connect('mongodb://cbitar:pooperscooper@ds141937.mlab.com:41937/moe')
+mongoose.connect(url)
 
 // database connection event
 mongoose.connection.once('open', function () {
