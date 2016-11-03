@@ -36,7 +36,7 @@ function create(req, res, next) {
           if(!user || !user.verifyPasswordSync(req.body.password)) {
             return res.status(400).json({error: 'Bad credentials'});
           } else {
-            let token = jwt.sign({ user: user }, secret, jwtOptions);
+            var token = jwt.sign({ user: user }, secret, jwtOptions);
             return res.json({
               token: token
             });
@@ -46,7 +46,7 @@ function create(req, res, next) {
         if (!user.verifyPasswordSync(req.body.password) ) {
         return res.status(400).json({error: 'Bad credentials'});
         } else {
-          let token = jwt.sign({ user: user }, secret, jwtOptions);
+          var token = jwt.sign({ user: user }, secret, jwtOptions);
           return res.json({
             token: token
           });
