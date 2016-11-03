@@ -28,33 +28,22 @@ function create(req, res, next) {
   if (!req.body.email || !req.body.password) {
     return res.status(400).json({error: 'Bad credentials'});
   }
-  Student.findOne({email: req.body.email})
-    .then(user => {
-      if ( !user ) {
-        Teacher.findOne({email: req.body.email})
-        .then(user => {
-          if(!user || !user.verifyPasswordSync(req.body.password)) {
-            return res.status(400).json({error: 'Bad credentials'});
-          } else {
-            var token = jwt.sign({ user: user }, secret, jwtOptions);
-            return res.json({
-              token: token
-            });
-          }
-        });
-      } else {
-        if (!user.verifyPasswordSync(req.body.password) ) {
-        return res.status(400).json({error: 'Bad credentials'});
-        } else {
-          var token = jwt.sign({ user: user }, secret, jwtOptions);
-          return res.json({
-            token: token
-          });
-        }
-      }
-    });
+  Promise.all([
+    Student.findOne({email: req.body.email}),
+    Teacher.findOne({email: req.body.email})
+  ]).then(([student, teacher]) => {
+    return student ? student : teacher;
+  }).then((user) => {
+    if ( !user || !user.verifyPasswordSync(req.body.password) ) {
+      return res.status(400).json({error: 'Bad credentials'});
+    } else {
+      var token = jwt.sign({ user: user }, secret, jwtOptions);
+      return res.json({
+        token: token
+      });
+    }
+  }).catch((err) => next(err));
 }
-
 
 module.exports = {
  create:       create,

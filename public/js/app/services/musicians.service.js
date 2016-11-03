@@ -49,6 +49,7 @@
     }
 
     function updateStudent(student) {
+      console.log(student)
       return $http.put('/api/students', student)
         .then(function(response){
           UserService.setUserViaToken(response.data.token);

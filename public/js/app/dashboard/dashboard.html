@@ -1,27 +1,19 @@
-<h1 style="margin-left: 30px">Hello, {{authCtrl.getUser().name}}</h1>
-<!-- <h2>Hello, {{authCtrl.getUser().name}}</h2> -->
+<h1 style="margin-left: 30px">Hello, {{vm.user.name}}</h1>
+
 <br>
 
 
 
-<!-- Name: {{authCtrl.getUser().name}}
-Email: {{authCtrl.getUser().email}}
-Instrument: {{authCtrl.getUser().instrument}}
-{{authCtrl.getUser().genre}}
-{{authCtrl.getUser().bio}}
-{{authCtrl.getUser().bio}}
-{{authCtrl.getUser().bio}}
-{{authCtrl.getUser().bio}} -->
 
 <ul class="list-group profileList">
   <h3>My Profile</h3>
-  <li class="list-group-item">Name: <strong>{{authCtrl.getUser().name}}</strong></li>
-  <li class="list-group-item">Email: <strong>{{authCtrl.getUser().email}}</strong></li>
-  <li class="list-group-item">Instrument: <strong>{{authCtrl.getUser().instrument}}</strong></li>
-  <li class="list-group-item">Genre: <strong>{{authCtrl.getUser().genre}}</strong></li>
-  <li class="list-group-item">Bio: <strong>{{authCtrl.getUser().bio}}</strong></li>
-  <li ng-show="vm.isTeacher()" class="list-group-item">Price per Lesson: <strong>{{authCtrl.getUser().price_per_lesson}}</strong></li>
-  <li ng-show="vm.isTeacher()" class="list-group-item">Length per Lesson: <strong>{{authCtrl.getUser().length_per_lesson}}</strong></li>
+  <li class="list-group-item">Name: <strong>{{vm.user.name}}</strong></li>
+  <li class="list-group-item">Email: <strong>{{vm.user.email}}</strong></li>
+  <li class="list-group-item">Instrument: <strong>{{vm.user.instrument}}</strong></li>
+  <li class="list-group-item">Genre: <strong>{{vm.user.genre}}</strong></li>
+  <li class="list-group-item">Bio: <strong>{{vm.user.bio}}</strong></li>
+  <li ng-show="vm.isTeacher()" class="list-group-item">Price per Lesson: <strong>{{vm.user.price_per_lesson}}</strong></li>
+  <li ng-show="vm.isTeacher()" class="list-group-item">Length per Lesson: <strong>{{vm.user.length_per_lesson}}</strong></li>
   <br>
   <a ui-sref="{{vm.isTeacher() ? 'edit-teacher' : 'edit-student'}}" class="btn btn-warning animated fadeIn">Edit Profile</a>
 </ul>

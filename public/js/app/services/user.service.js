@@ -82,7 +82,9 @@
     }
 
     function isTeacher() {
-      return user.hasOwnProperty('price_per_lesson');
+      if(user) {
+        return user.hasOwnProperty('price_per_lesson');
+      }
     };
 
     function setUserViaToken(token) {
