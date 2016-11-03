@@ -7,10 +7,10 @@
 
   function routes($urlRouterProvider, $stateProvider) {
     $stateProvider
-      .state('welcome', {
-        url: '/welcome',
-        templateUrl: 'js/app/welcome/welcome.html'
-      })
+      // .state('welcome', {
+      //   url: '/welcome',
+      //   templateUrl: 'js/app/welcome/welcome.html'
+      // })
       .state('lesson', {
         url: '/lesson',
         templateUrl: 'js/app/lesson/lesson.html'
