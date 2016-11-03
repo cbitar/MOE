@@ -14,8 +14,11 @@
     vm.editingUser.password = "";
 
     function updateTeacher() {
-      MusicianService.updateTeacher(vm.editingUser);
-      $state.go('dashboard');
+      if (!vm.editingUser.password) delete vm.editingUser.password;
+      MusicianService.updateTeacher(vm.editingUser)
+        .then(function() {
+          $state.go('dashboard');
+        });
     }
 
 }

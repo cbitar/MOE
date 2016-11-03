@@ -13,9 +13,11 @@
     vm.updateStudent = updateStudent;
 
     function updateStudent () {
-      console.log('works click')
+      if (!vm.editingUser.password) delete vm.editingUser.password;
       MusicianService.updateStudent(vm.editingUser)
-      $state.go('dashboard');
+      .then(function() {
+        $state.go('dashboard');
+      });
     };
 
 }
