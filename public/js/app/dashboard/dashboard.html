@@ -13,8 +13,8 @@ Instrument: {{authCtrl.getUser().instrument}}
 {{authCtrl.getUser().bio}}
 {{authCtrl.getUser().bio}} -->
 
-<h3>My Profile</h3>
 <ul class="list-group profileList">
+  <h3>My Profile</h3>
   <li class="list-group-item">Name: <strong>{{authCtrl.getUser().name}}</strong></li>
   <li class="list-group-item">Email: <strong>{{authCtrl.getUser().email}}</strong></li>
   <li class="list-group-item">Instrument: <strong>{{authCtrl.getUser().instrument}}</strong></li>
@@ -22,10 +22,11 @@ Instrument: {{authCtrl.getUser().instrument}}
   <li class="list-group-item">Bio: <strong>{{authCtrl.getUser().bio}}</strong></li>
   <li class="list-group-item">Price per Lesson: <strong>{{authCtrl.getUser().price_per_lesson}}</strong></li>
   <li class="list-group-item">Length per Lesson: <strong>{{authCtrl.getUser().length_per_lesson}}</strong></li>
+  <br>
+  <a ui-sref="{{vm.isTeacher() ? 'edit-teacher' : 'edit-student'}}" class="btn btn-warning animated fadeIn">Edit Profile</a>
 </ul>
 
 
-<a ui-sref="{{vm.isTeacher() ? 'edit-teacher' : 'edit-student'}}" class="btn btn-warning animated fadeIn">Edit Profile</a>
 
 
 

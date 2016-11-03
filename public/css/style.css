@@ -57,8 +57,9 @@ strong {
     display: block;
     padding: 10px 15px;
     margin-bottom: -1px;
-    background-color: rgba(76, 82, 82, 0.72);
+    background-color: rgba(46, 49, 55, 0.78);
     border: 1px solid #ddd;
+    width: 50%;
 }
 
 
