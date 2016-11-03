@@ -46,10 +46,8 @@ strong {
 }
 
 .profileList {
-/*  width: 30%;*/
   margin: 30px;
   background-color: transparent;
-  /*margin-left: 300px;*/
 }
 
 .profileList>li {
@@ -62,15 +60,8 @@ strong {
     width: 50%;
 }
 
-
 .active {
   color: #cdcccc;
-}
-a.active:hover {
-  font-weight: bolder;
-  background-color: red;
-  color: black;
-  text-shadow: 10px;
 }
 
 #splashMoe {
