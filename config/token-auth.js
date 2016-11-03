@@ -31,7 +31,10 @@ function create(req, res, next) {
   Promise.all([
     Student.findOne({email: req.body.email}),
     Teacher.findOne({email: req.body.email})
-  ]).then(([student, teacher]) => {
+  ]).then(users => {
+    [student, teacher] = users;
+    // var student = users[0];
+    // var teacher = users[1];
     return student ? student : teacher;
   }).then((user) => {
     if ( !user || !user.verifyPasswordSync(req.body.password) ) {
