@@ -1,7 +1,11 @@
 #MOE
 ##Musical Online Education
 
-Links: 
+https://trello.com/b/5OFvZKKj/musical-online-education-moe
+
+https://moe-musical-online-education.herokuapp.com/#/home
+
+https://github.com/cbitar/MOE
 
 ##Approach to Project
     This application was built with the intentions of creating an online platform 
