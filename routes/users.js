@@ -18,7 +18,7 @@ router.post('/login', token.create);
 router.post('/form-teacher', function(req, res, next) {
   Teacher.create(req.body, function(err, newTeacher) {
     if(err) return res.status(400).json({error: 'Invalid new teacher'});
-    let token = jwt.sign({ user: newTeacher }, secret, jwtOptions);
+    var token = jwt.sign({ user: newTeacher }, secret, jwtOptions);
     return res.json({
       token: token
     });
@@ -28,7 +28,7 @@ router.post('/form-teacher', function(req, res, next) {
 router.post('/form-student', function(req, res, next) {
   Student.create(req.body, function(err, newStudent) {
     if(err) return res.status(400).json({error: 'Invalid new student'});
-    let token = jwt.sign({ user: newStudent }, secret, jwtOptions);
+    var token = jwt.sign({ user: newStudent }, secret, jwtOptions);
     return res.json({
       token: token
     });
