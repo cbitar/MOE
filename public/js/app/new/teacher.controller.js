@@ -10,13 +10,20 @@
     vm.errors = null;
     vm.signUpTeacher = signUpTeacher;
 
-    function signUpTeacher() {
+
+      function signUpTeacher() {
       UserService.signUpTeacher(vm.newTeacher)
         .then(function(teacher) {
           console.log(teacher)
+          if(teacher !== undefined) {
+          $state.go('dashboard');
+          }
         });
-      $state.go('dashboard');
     }
   }
 
 })();
+
+
+
+

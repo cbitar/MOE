@@ -57,21 +57,17 @@
     // }
 
     function updateTeacher(teacher) {
-      console.log(Teacher)
-      return $http.put('/api/edit-teacher' ,Teacher)
+      console.log(teacher)
+      return $http.put('/api/edit-teacher' ,teacher)
         .then(function(response){
-          var token = response.data.token;
-          console.log(token);
-          AuthTokenService.setToken(token);
-          user = decode(token);
-          return user;
-        }, function(error) {
-          console.log(error);
-        })
+          UserService.setUserViaToken(response.data.token);
+          // AuthTokenService.setToken(token);
+          // user = decode(token);
+        });
     }
 
     function updateStudent(student) {
-      return $http.put('/api/edit-student', Student)
+      return $http.put('/api/edit-student', student)
         .then(function(response){
           var token = response.data.token;
           console.log(token);

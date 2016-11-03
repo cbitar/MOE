@@ -3,29 +3,17 @@
 
   angular.module('app').controller('EditTeacherController', EditTeacherController);
 
-  EditTeacherController.$inject = ['MusicianService', '$state', '$log', 'students', 'teachers'];
+  EditTeacherController.$inject = ['MusicianService', '$state', '$log', 'UserService'];
 
-  function EditTeacherController(MusicianService, $state, $log, students, teachers) {
+  function EditTeacherController(MusicianService, $state, $log, UserService) {
     var vm = this;
 
-    vm.students = students;
-    vm.teachers = teachers;
-    vm.updateTeacher= updateTeacher;
-    vm.updateStudent= updateStudent;
+    vm.editingUser = Angular.copy(UserService.getUser());
 
-
-
-  function updateTeacher() {
-    console.log('works')
-    MusicianService.updateTeacher();
-    $state.go('dashboard');
-  }
-
-  function updateStudent() {
-    console.log('works')
-    MusicianService.updateStudent();
-    $state.go('dashboard');
-  }
+    function updateTeacher() {
+      MusicianService.updateTeacher(vm.editingUser);
+      $state.go('dashboard');
+    }
 
 }
 

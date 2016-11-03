@@ -16,7 +16,9 @@
       logout: logout,
       getUser: getUser,
       signUpStudent: signUpStudent,
-      signUpTeacher: signUpTeacher
+      signUpTeacher: signUpTeacher,
+      isTeacher: isTeacher,
+      setUserViaToken: setUserViaToken
     }
 
     return service;
@@ -53,7 +55,7 @@
 
     function signUpTeacher(newTeacher) {
       console.log(newTeacher)
-      return $http.post('/api/form-teacher' ,newTeacher)
+      return $http.post('/api/form-teacher' , newTeacher)
         .then(function(response){
           var token = response.data.token;
           console.log(token);
@@ -62,7 +64,7 @@
           return user;
         }, function(error) {
           console.log(error);
-        })
+        });
     }
 
     function signUpStudent(newStudent) {
@@ -77,6 +79,16 @@
           console.log(error);
         });
     }
+
+    function isTeacher() {
+      return user.hasOwnProperty('price_per_lesson');
+    };
+
+    function setUserViaToken() {
+      AuthTokenService.setToken(token);
+      user = decode(token);
+    }
+
   }
 
 })();

@@ -23,7 +23,7 @@ Instrument: {{authCtrl.getUser().instrument}}
 </ul>
 
 
-<button ng-click="vm.updateTeacher()" class="btn btn-warning animated fadeIn">Edit Profile</button>
+<a ui-sref="{{vm.isTeacher() ? 'edit-teacher' : 'edit-student'}}" class="btn btn-warning animated fadeIn">Edit Profile</a>
 
 
 

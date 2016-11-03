@@ -11,6 +11,8 @@
     vm.user = user;
     vm.logout = logout;
 
+    vm.isTeacher = UserService.isTeacher;
+
     function logout() {
       UserService.logout();
       $state.go('welcome');

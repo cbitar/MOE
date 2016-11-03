@@ -14,9 +14,13 @@
       UserService.signUpStudent(vm.newStudent)
         .then(function(student) {
           console.log(student)
+          if(student !== undefined) {
+          $state.go('dashboard');
+          }
         });
-      $state.go('dashboard');
     }
   }
 
+
 })();
+
