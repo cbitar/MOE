@@ -9,8 +9,11 @@ https://moe-musical-online-education.herokuapp.com/#/home
 ##Approach to Project
     This application was built with the intentions of creating an online platform 
     with which students and teachers could connect and give and receive online lessons
-    through Google Hangout's technology. I attempted to maintain organization by keeping the AngularJS portion of the application within the public folder of the app. The Express portion
-    of the app is outside that public client-side folder. This project still requires alot of development, but it is the basis of an app that would more easily connect students and teachers of music online.
+    through Google Hangout's technology. I attempted to maintain organization by keeping
+    the AngularJS portion of the application within the public folder of the app. The 
+    Express portion of the app is outside that public client-side folder. This project 
+    still requires alot of development, but it is the basis of an app that would more 
+    easily connect students and teachers of music online.
 
 ##Technologies Used
     HTML5
