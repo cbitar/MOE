@@ -1,4 +1,4 @@
-@import url('https://fonts.googleapis.com/css?family=Coiny|Raleway|Righteous|Poiret+One');
+@import url('https://fonts.googleapis.com/css?family=Coiny|Raleway|Righteous|Poiret+One|Source+Code+Pro');
 
 body {
   font-family: 'Raleway', sans-serif;
@@ -9,8 +9,10 @@ body {
 nav {
   margin-top: 5px;
   margin-left: 10px;
+  /*font-family: 'Coiny', cursive;*/
+  /*font-family: 'Source Code Pro', monospace;*/
   /*font-family: 'Righteous', cursive;*/
-  font-family: 'Poiret One', cursive;
+  /*font-family: 'Poiret One', cursive;*/
   font-weight: bolder;
 }
 

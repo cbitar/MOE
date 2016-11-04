@@ -13,9 +13,6 @@
 
 
     function signUpTeacher() {
-
-console.log(vm.newTeacher);
-
       UserService.signUpTeacher(vm.newTeacher)
         .then(function(teacher) {
           console.log(teacher)

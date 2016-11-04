@@ -19,7 +19,6 @@
     vm.signUpStudent = signUpStudent;
 
     function signUpTeacher() {
-      console.log('npt working')
       UserService.signUpTeacher();
       $state.go('dashboard');
     }
