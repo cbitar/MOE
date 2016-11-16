@@ -137,6 +137,7 @@ label {
 .homebox {
   display: inline-block;
   padding-left: 275px;
+  margin-left: 15%;
 }
 
 .splash {
