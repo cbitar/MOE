@@ -12,10 +12,6 @@ body {
 nav {
   margin-top: 5px;
   margin-left: 10px;
-  /*font-family: 'Coiny', cursive;*/
-  /*font-family: 'Source Code Pro', monospace;*/
-  /*font-family: 'Righteous', cursive;*/
-  /*font-family: 'Poiret One', cursive;*/
   font-weight: bolder;
 }
 
@@ -29,9 +25,6 @@ input, select {
 
 .slogan {
   font-weight: bolder;
-/*  border: 1px solid white;*/
-/*  background-color: grey;*/
-/*  font-family: 'Coiny', cursive;*/
 }
 
 
@@ -81,19 +74,15 @@ strong {
 
 .navbar-brand {
   color: #f9bd73;
-  /*background-color: #f9bd73;*/
   font-family: 'Coiny', cursive;
   font-size: 25px;
-/*  border: 1px solid black;
-  border-radius: 60px;*/
+
 }
 
 a:hover {
   background-color: #f9bd73;
 }
-/*.active:hover {
-  background-color: #f9bd73;
-}*/
+
 .headlog {
   margin-top: 10px;
   margin-left: 600px;
@@ -118,10 +107,6 @@ form {
 
 label {
   margin-left: 20px;
-}
-
-#form-but {
-/*  margin-left: 500px;*/
 }
 
 #modal-but {
