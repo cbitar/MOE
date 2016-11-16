@@ -21,8 +21,7 @@
     </div>
     <ul class="nav navbar-nav pull-right">
     <!-- fix route change home tab -->
-<!--       <li class="active"><a class="active" ui-sref="welcome">Home</a></li>
- -->      <li class="active"><a class="active" ui-sref="about">About</a></li>
+      <li class="active"><a class="active" ui-sref="about">About</a></li>
       <li class="active" ng-show="authCtrl.getUser()"><a class="active" ui-sref="dashboard">My Profile</a></li>
       <li class="active"><a class="active" ui-sref="form-teacher">New Teacher</a></li>
       <li class="active"><a class="active" ui-sref="form-student">New Student</a></li>
@@ -31,55 +30,10 @@
       <li class="active" ng-hide="authCtrl.getUser()"><a class="active" ui-sref="login">Login</a></li>
       <li class="active" ng-show="authCtrl.getUser()"><a class="active" href="#" ng-click="authCtrl.logout()">Logout</a></li>
       <li>{{authCtrl.getUser().name}}</li>
-      <!-- <li class="active" ng-hide="authCtrl.getUser()"><button type="button" class="btn btn-success headlog" data-toggle="modal" data-target=".bd-example-modal-sm">Login</button></li> -->
  </ul>
   </div>
   </nav>
-
-<!-- <button type="button" class="btn btn-info" data-toggle="modal" data-dismiss='modal' data-target=".bd-example-modal-sm">Login</button> -->
-
-<!--   <div id="modal" class="modal fade bd-example-modal-sm" tabindex="-1" role="dialog" aria-labelledby="mySmallModalLabel" aria-hidden="true">
-    <div class="modal-dialog modal-sm">
-      <div class="modal-content">
-        <input type="text" placeholder="Email" ng-model="vm.email">
-        <input type="password" placeholder="Password" ng-model="vm.password">
-        <button id="modal-but" class="btn btn-success" ng-click="vm.login()">Log In</button>
-        <br>
-        <div ng-show="vm.errors">
-          {{vm.errors}}
-        </div>
-      </div>
-    </div>
-  </div> -->
-
-
   <main class="content" ui-view></main>
-
-
-<footer class="footer p-t-1">
-<!--         <div class="container">
-            <div class="pull-right">
-                <nav class="navbar" style="background:transparent; color: black;">
-                    <nav class="nav navbar-nav pull-xs-left">
-                        <a href="mailto:clarissabitar@gmail.com?subject=feedback" email="" me="">Contact</a>
-                        <a class="nav-item nav-link" href="#">About</a>
-                        <a class="nav-item nav-link" href="#">Help</a>
-                    </nav>
-                </nav>
-            </div> -->
-
-            <a href="#"><i class="fa fa-facebook-official fa-2x"></i></a>
-            <a href="#"><i class="fa fa-pinterest-p fa-2x"></i></a>
-            <a href="#"><i class="fa fa-twitter fa-2x"></i></a>
-            <a href="#"><i class="fa fa-flickr fa-2x"></i></a>
-            <a href="#"><i class="fa fa-linkedin fa-2x"></i></a>
-
-            <p class="h6">
-                Created By
-                <a href="https://github.com/cbitar" target="_blank">Clarissa Bitar</a>
-            </p>
-        </div>
-    </footer>
 
   <script src="socket.io/socket.io.js"></script>
   <script src="js/app.js"></script>
@@ -97,7 +51,6 @@
   <script src="js/app/search/search.controller.js"></script>
   <script src="js/app/edit/edit.student.controller.js"></script>
   <script src="js/app/edit/edit.teacher.controller.js"></script>
-
 </body>
 </html>
 

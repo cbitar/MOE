@@ -159,6 +159,7 @@ span {
 .glyphicon {
   font-size: 60px;
   color: #cdcccc;
+  margin-left: 15%;
 }
 
 #log {
