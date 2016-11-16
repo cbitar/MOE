@@ -1,3 +1,6 @@
+
+![Alt text](/public/moe.png?raw=true "Optional Title");
+
 #MOE
 ##Musical Online Education
 
