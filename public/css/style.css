@@ -101,6 +101,11 @@ a:hover {
   text-align: center;
   margin: 30px;
 }
+#moeQues {
+  background-color: rgba(46, 49, 55, 0.78);
+  text-align: center;
+  margin: 30px;
+}
 
 form {
   margin-left: 440px;
@@ -135,6 +140,7 @@ label {
 
 .splash {
   text-align: center;
+  margin-left: -100px;
 }
 
 .card {
