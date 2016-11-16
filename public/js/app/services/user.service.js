@@ -55,7 +55,6 @@
 
 
     function signUpTeacher(newTeacher) {
-      console.log(newTeacher)
       return $http.post('/api/form-teacher' , newTeacher)
         .then(function(response){
           var token = response.data.token;
